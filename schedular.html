@@ -1,0 +1,334 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UB Go Student - Schedular</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/shedular.css">
+</head>
+<body>
+    <!-- Desktop Layout -->
+    <div class="desktop-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="./assets/imgs/ub.jpg" alt="">
+                 <span>UB Go Student</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon"><img src="./assets/icons/no-fill-dashboard.svg" alt=""></span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="classroom.html" class="nav-link">
+                            <span class="nav-icon"><img src="./assets/icons/video-camera.svg" alt=""></span>
+                            Classroom
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./schedular.html" class="nav-link active">
+                            <span class="nav-icon"><img src="./assets/icons/filled-scheduler.svg" alt=""></span>
+                            Schedular
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="grade.html" class="nav-link">
+                            <span class="nav-icon"><img src="./assets/icons/academic-cap-nocolor.svg" alt=""></span>
+                            Grades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="note.html" class="nav-link">
+                            <span class="nav-icon"><img src="./assets/icons/pencil-alt.svg" alt=""></span>
+                            Notes
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Student Portal</h1>
+                <!-- <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search courses, grade, or notes">
+                    <span class="search-icon">🔍</span>
+                </div> -->
+                <div class="header-side">
+                    <button class="head-btn">
+                    <img src="./assets/icons/bell.svg" alt="Notification">
+                </button>
+                <button class="head-btn">
+                    <img src="./assets/icons/information-circle.svg" alt="Help and Support">
+                </button>
+                </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon purple"><img src="./assets/icons/library.svg" alt="UB Structure"></div>
+                        <span class="card-label">UB Structure</span>
+                    </div>
+                    <div class="card-title">Academic Structure</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon blue"><img src="./assets/icons/book-open.svg" alt="Registered Courses"></div>
+                        <span class="card-label">Registered Courses</span>
+                    </div>
+                    <div class="card-title">Student Form B</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon green"><img src="./assets/icons/academic-cap.svg" alt="Grade Traker"></div>
+                        <span class="card-label">GPA Tracker</span>
+                    </div>
+                    <div class="card-value">3.41</div>
+                    <div class="card-subtitle">1st Semester<span class="card-badge">+0.0</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon yellow"><img src="./assets/icons/clock.svg" alt="Study Hours"></div>
+                        <span class="card-label">Study Hours</span>
+                    </div>
+                    <div class="card-value">8.5</div>
+                    <div class="card-subtitle">Hours this week<span class="card-badge-study">+1.5</span></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon red"><img src="./assets/icons/users.svg" alt="UB Classroom"></div>
+                        <span class="card-label">UB Classroom</span>
+                    </div>
+                    <div class="card-title">No Conference Class</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon cyan"><img src="./assets/icons/globe.svg" alt="News Feed"></div>
+                        <span class="card-label">News Feed</span>
+                    </div>
+                    <div class="card-title">Latest Stories</div>
+                </div>
+            </div>
+
+            <!-- Study Timetable Section -->
+            <div class="study-section">
+                <div class="section-header">
+                    <h2 class="section-title">Study TimeTable</h2>
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <span class="date-range">May 1st - May 21st,2025</span>
+                        <div class="calendar-nav">
+                            <button class="nav-btn">‹</button>
+                            <button class="nav-btn">›</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-header">
+                    <div class="calendar-day">Sun</div>
+                    <div class="calendar-day">Mon</div>
+                    <div class="calendar-day">Tue</div>
+                    <div class="calendar-day">Wed</div>
+                    <div class="calendar-day">Thurs</div>
+                    <div class="calendar-day">Fri</div>
+                    <div class="calendar-day">Sat</div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <!-- Profile Panel -->
+        <div class="profile-panel">
+            <h3>Profile</h3>
+            <div class="profile-header">
+                <div class="profile-badge">COT Student</div>
+                <img src="./assets/imgs/kandi_innovate_upscayl_2x_realesrgan-x4plus.png" alt="Avatar" class="profile-avatar">
+                <div class="profile-name">Ribert Kandi Junior</div>
+                <div class="profile-matricule">MAT NO: CT23A140</div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Grades</h3>
+                <div class="grade-item">
+                    <div class="grade-info">
+                        <h4>Python for Networking</h4>
+                        <p>2nd Semester</p>
+                    </div>
+                    <div class="grade-badge grade-a">A</div>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-info">
+                        <h4>Mathematics II</h4>
+                        <p>2nd Semester</p>
+                    </div>
+                    <div class="grade-badge grade-b">B+</div>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-info">
+                        <h4>French 101</h4>
+                        <p>1st Semester</p>
+                    </div>
+                    <div class="grade-badge grade-f">F</div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Reminder</h3>
+                <div class="remainder">
+                     <div class="reminder-item">
+                    <div class="reminder-icon purple"><img src="./assets/icons/puzzle.svg" alt="Remainder 1"></div>
+                    <div class="reminder-info">
+                        <h4>Data Security CA</h4>
+                        <p>Tomorrow, 9:30 AM</p>
+                    </div>
+                </div>
+                <div class="reminder-item">
+                    <div class="reminder-icon yellow"><img src="./assets/icons/book-icon.svg" alt="Remainder 2"></div>
+                    <div class="reminder-info">
+                        <h4>Study Mathematics IV</h4>
+                        <p>Today, 7:30 PM</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="mobile-layout">
+        <div class="mobile-header">
+            <div class="mobile-profile">
+                <img src="./assets/imgs/kandi_innovate_upscayl_2x_realesrgan-x4plus.png" alt="Avatar" class="mobile-avatar">
+                <div class="gpa-badge">
+                <div class="mobile-gpa-badge">
+                    <img src="./assets/icons/Star 1.svg" alt="star"> <span>3.41</span>
+                </div>
+                
+            </div>
+                <div class="mobile-profile-info">
+                    <h2>Hello, Kandi</h2>
+                    <p>CT23A140</p>
+                </div>
+            </div>
+            
+            <div class="mobile-bell"><img src="./assets/icons/filled-bell.svg" alt=""></div>
+        </div>
+
+        <div class="mobile-main">
+            <div class="mobile-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon purple"><img src="./assets/icons/library.svg" alt="UB Structure"></div>
+                        <span class="card-label">UB Structure</span>
+                    </div>
+                    <div class="card-title">Academic Structure</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon blue"><img src="./assets/icons/book-open.svg" alt="Registered Courses"></div>
+                        <span class="card-label">Your  Courses</span>
+                    </div>
+                    <div class="card-title">Student Form B</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon green"><img src="./assets/icons/academic-cap.svg" alt="Grade Traker"></div>
+                        <span class="card-label">GPA Tracker</span>
+                    </div>
+                    <div class="card-value">3.41</div>
+                    <div class="card-subtitle">1st Semester<span class="card-badge">+0.0</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon yellow"><img src="./assets/icons/clock.svg" alt="Study Hours"></div>
+                        <span class="card-label">Study Hours</span>
+                    </div>
+                    <div class="card-value">8.5</div>
+                    <div class="card-subtitle">Hours this week<span class="card-badge-study">+1.5</span></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon red"><img src="./assets/icons/users.svg" alt="UB Classroom"></div>
+                        <span class="card-label">UB Classroom</span>
+                    </div>
+                    <div class="card-title">No Conference Class</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon cyan"><img src="./assets/icons/globe.svg" alt="News Feed"></div>
+                        <span class="card-label">News Feed</span>
+                    </div>
+                    <div class="card-title">Latest Stories</div>
+                </div>
+            </div>
+
+            <div class="mobile-calendar-section">
+                <div class="section-header">
+                    <h3 class="section-title">Study TimeTable</h3>
+                    <!-- <span class="date-range">May 1st - May 21st,2025</span> -->
+                    <div class="calendar-nav">
+                        <button class="nav-btn">‹</button>
+                        <button class="nav-btn">›</button>
+                    </div>
+                </div>
+                <div class="mobile-calendar-header">
+                    <div>S</div>
+                    <div>M</div>
+                    <div>T</div>
+                    <div>W</div>
+                    <div>TH</div>
+                    <div>F</div>
+                    <div>S</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav">
+            <a href="index.html" class="nav-item-mobile">
+                <span><img src="./assets/icons/no-fill-dashboard.svg" alt=""></span>
+                <span>Dashboard</span>
+            </a>
+            <a href="classroom.html" class="nav-item-mobile">
+                <span><img src="./assets/icons/video-camera.svg" alt=""></span>
+                <span>Classroom</span>
+            </a>
+            <a href="schedular.html" class="nav-item-mobile active">
+                <span><img src="./assets/icons/filled-scheduler.svg" alt=""></span>
+                <span>Schedule</span>
+            </a>
+            <a href="grade.html" class="nav-item-mobile">
+                <span><img src="./assets/icons/academic-cap-nocolor.svg" alt=""></span>
+                <span>Grades</span>
+            </a>
+            <a href="note.html" class="nav-item-mobile">
+                <span><img src="./assets/icons/pencil-alt.svg" alt=""></span>
+                <span>Notes</span>
+            </a>
+        </div>
+    </div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
