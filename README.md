@@ -79,7 +79,7 @@ Start your Apache and MySQL services from your XAMPP/WAMP control panel.
 
 Open your MySQL client (e.g., phpMyAdmin by navigating to http://localhost/phpmyadmin).
 
-Create a new database and name it student_grades.
+Create a new database and name it ubstudent_db.
 
 Select the new database and go to the "SQL" tab.
 
@@ -89,7 +89,7 @@ Configure Database Connection:
 
 Navigate to the config/ folder within the project.
 
-Open the database.php file.
+Open the updateupdate file and copy the database information.
 
 Update the database credentials ($hostname, $username, $password, $database) to match your local MySQL setup. For a default XAMPP installation, you might only need to change the password if you've set one.
 
@@ -97,11 +97,7 @@ Create Uploads Directory:
 
 In the root directory of the project, create a new folder and name it uploads. This folder is required for the PDF upload functionality to work.
 
-Run the Application:
 
-Admin Panel: Access the admin dashboard by navigating to http://localhost/ub_student_app/admin/ in your browser.
-
-Student Portal: Access the student login page at http://localhost/ub_student_app/student/login.php.
 
 5. How to Use
 Admin Workflow
